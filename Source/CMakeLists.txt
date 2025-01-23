@@ -40,9 +40,11 @@ configure_file(DataStructuresAndAlgorithmsConfig.h.in DataStructuresAndAlgorithm
 add_subdirectory(Algorithms)
 add_subdirectory(DataStructures)
 
+set(source_list main.cpp)
 # Add the source and header files to be compiled into the project
-add_executable(DataStructuresAndAlgorithms
-  main.cpp)
+add_executable(DataStructuresAndAlgorithms ${source_list})
+# Creates a "folder-like" structure in VS Solution Explorer
+source_group(TREE ${CMAKE_CURRENT_SOURCE_DIR} FILES ${source_list})
 
 set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT DataStructuresAndAlgorithms)
 
