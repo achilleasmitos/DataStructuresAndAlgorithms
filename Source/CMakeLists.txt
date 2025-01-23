@@ -30,6 +30,9 @@ FetchContent_Declare(
 # set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 
+# Hide Google Test and Google Mock projects in Visual Studio Solution Explorer
+set_target_properties(gmock gmock_main gtest gtest_main PROPERTIES FOLDER "GoogleTest")
+
 # Declare a CMake config file and turn it into an importable header file
 configure_file(DataStructuresAndAlgorithmsConfig.h.in DataStructuresAndAlgorithmsConfig.h)
 
