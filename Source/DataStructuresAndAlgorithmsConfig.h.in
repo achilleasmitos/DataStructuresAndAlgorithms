@@ -1,0 +1,5 @@
+// Cmake config file to grab the project's version
+
+// The first part of the below macros has to match the project's given name
+#define DataStructuresAndAlgorithms_VERSION_MAJOR @DataStructuresAndAlgorithms_VERSION_MAJOR@
+#define DataStructuresAndAlgorithms_VERSION_MINOR @DataStructuresAndAlgorithms_VERSION_MINOR@

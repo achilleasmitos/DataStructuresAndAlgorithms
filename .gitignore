@@ -30,3 +30,6 @@
 *.exe
 *.out
 *.app
+
+# Default build folder(s)
+build/
