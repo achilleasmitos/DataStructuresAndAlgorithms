@@ -4,6 +4,9 @@ set(
 	LinkedList/examples.h
 	LinkedList/DoublyLinkedList.h
 	LinkedList/SinglyLinkedList.h
+	Queue/examples.cpp
+	Queue/examples.h
+	Queue/Queue.h
 )
 
 add_library(DataStructures ${source_list})
