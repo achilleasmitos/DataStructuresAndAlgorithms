@@ -5,31 +5,32 @@ namespace datastructures
 #pragma warning(push)
 #pragma warning(disable : 4820) // Depending on the value of TValue here, a padding error may appear in VS compiler
 /// <summary>
-/// This represents a node in a singly linked list.
-/// It contains a value as well as a pointer to its next element (nullptr by default).
+/// This represents a node in a doubly linked list.
+/// It contains a value as well as a pointer to its next element and a pointer to its previous element (nullptr by default).
 /// </summary>
 /// <typeparam name="TValue">The value stored in the node, for example 'int' or 'std::string'</typeparam>
 template<typename TValue>
-struct SLListNode
+struct DLListNode
 {
 	TValue value;
-	std::shared_ptr<SLListNode> next{nullptr};
+	std::shared_ptr<DLListNode> next{nullptr};
+	std::shared_ptr<DLListNode> prev{nullptr};
 };
 #pragma warning(pop)
 
 /// <summary>
-/// A singly linked list is the most common type of a linked list.
-/// Each of its nodes only points forward to the next node.
+/// A doubly linked list is the most common alternative type of a linked list (after a singly linked list).
+/// Each of its nodes points forward to the next node and backwards to its previous element.
 ///
 /// The list is just a wrapper around its first (head) node. This can be a nullptr,
 /// indicating an empty list.
-/// A node that points to nullptr is considered to be the last node of the list.
+/// A node that forward-points to nullptr is considered to be the last node of the list.
 /// </summary>
 /// <typeparam name="TValue">The value stored in each of the list's nodes.</typeparam>
 template<typename TValue>
-struct SinglyLinkedList
+struct DoublyLinkedList
 {
-	std::shared_ptr<SLListNode<TValue>> head{nullptr};
+	std::shared_ptr<DLListNode<TValue>> head{nullptr};
 };
 
 } // namespace datastructures

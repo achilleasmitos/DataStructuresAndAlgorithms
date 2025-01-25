@@ -10,6 +10,8 @@ int main()
 			  << "." << DataStructuresAndAlgorithms_VERSION_MINOR << std::endl;
 
 	datastructures::RunSinglyLinkedListExample();
+	std::cout << std::endl;
+	datastructures::RunDoublyLinkedListExample();
 
 	return 0;
 }

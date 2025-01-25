@@ -2,6 +2,7 @@ set(
     source_list
 	LinkedList/examples.cpp
 	LinkedList/examples.h
+	LinkedList/DoublyLinkedList.h
 	LinkedList/SinglyLinkedList.h
 )
 

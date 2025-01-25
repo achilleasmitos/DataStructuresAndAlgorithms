@@ -5,4 +5,6 @@ namespace datastructures
 
 void RunSinglyLinkedListExample();
 
+void RunDoublyLinkedListExample();
+
 }
