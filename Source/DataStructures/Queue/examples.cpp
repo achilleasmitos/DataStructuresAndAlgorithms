@@ -1,3 +1,5 @@
+#include "pch_DataStructures.h"
+
 #include "examples.h"
 
 #include "Queue.h"

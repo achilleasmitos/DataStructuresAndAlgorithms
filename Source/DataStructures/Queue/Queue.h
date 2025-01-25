@@ -1,7 +1,5 @@
 #pragma once
 
-#include "pch_DataStructures.h"
-
 #include "LinkedList/SinglyLinkedList.h"
 
 namespace datastructures
@@ -60,7 +58,7 @@ public:
 	{
 		if (!HasElement())
 		{
-			throw new std::range_error("Queue does not contain any elements!");
+			throw std::range_error("Queue does not contain any elements!");
 		}
 
 		auto dequeuedElement = m_impl.head->value;

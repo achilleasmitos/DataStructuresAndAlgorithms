@@ -39,6 +39,7 @@ configure_file(DataStructuresAndAlgorithmsConfig.h.in DataStructuresAndAlgorithm
 # Create sub-projects visible in VS's Solution Explorer
 add_subdirectory(Algorithms)
 add_subdirectory(DataStructures)
+add_subdirectory(DataStructuresTests)
 
 set(source_list main.cpp)
 # Add the source and header files to be compiled into the project
