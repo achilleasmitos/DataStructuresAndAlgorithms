@@ -19,9 +19,11 @@ static_assert(RangeType<std::initializer_list<int>>);
 static_assert(RangeType<std::initializer_list<std::string>>);
 #pragma endregion
 
-template<typename T, RangeType Range>
-SinglyLinkedList<T> RangeToSinglyLinkedList(const Range& range)
+template<RangeType Range>
+auto RangeToSinglyLinkedList(const Range& range)
 {
+	using T = std::ranges::range_value_t<Range>;
+
 	SinglyLinkedList<T> sll{};
 	if (range.begin() == range.end())
 	{
@@ -43,9 +45,11 @@ SinglyLinkedList<T> RangeToSinglyLinkedList(const Range& range)
 	return sll;
 }
 
-template<typename T, RangeType Range>
-DoublyLinkedList<T> RangeToDoublyLinkedList(const Range& range)
+template<RangeType Range>
+auto RangeToDoublyLinkedList(const Range& range)
 {
+	using T = std::ranges::range_value_t<Range>;
+
 	DoublyLinkedList<T> dll{};
 	if (range.begin() == range.end())
 	{

@@ -73,7 +73,7 @@ void RunDoublyLinkedListExample()
 void RunRangeToSinglyLinkedListExample()
 {
 	std::vector<int> inputVector{1, 2, 3, 4, 5};
-	auto sll = RangeToSinglyLinkedList<int>(inputVector);
+	auto sll = RangeToSinglyLinkedList(inputVector);
 
 	auto currNode = sll.head;
 	std::cout << "The sllist produced from the vector is: [ ";
@@ -88,7 +88,7 @@ void RunRangeToSinglyLinkedListExample()
 void RunRangeToDoublyLinkedListExample()
 {
 	std::vector<int> inputVector{1, 2, 3, 4, 5};
-	auto dll = RangeToDoublyLinkedList<int>(inputVector);
+	auto dll = RangeToDoublyLinkedList(inputVector);
 
 	auto currNode = dll.head;
 	std::cout << "The dllist produced from the vector is: [ ";

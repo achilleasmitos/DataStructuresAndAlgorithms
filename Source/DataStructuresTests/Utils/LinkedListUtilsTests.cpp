@@ -8,7 +8,7 @@ using namespace datastructures;
 TEST(RangeToSinglyLinkedListUnitTests, ShouldReturn_EmptyList_When_VectorIsEmpty)
 {
 	const std::vector<float> testData{};
-	auto sll = RangeToSinglyLinkedList<float>(testData);
+	auto sll = RangeToSinglyLinkedList(testData);
 
 	EXPECT_EQ(sll.head, nullptr);
 }
@@ -16,7 +16,7 @@ TEST(RangeToSinglyLinkedListUnitTests, ShouldReturn_EmptyList_When_VectorIsEmpty
 TEST(RangeToSinglyLinkedListUnitTests, ShouldReturn_ListWithOneElement_When_VectorHasExactlyOneElement)
 {
 	const std::vector<double> testData{4.21};
-	auto sll = RangeToSinglyLinkedList<double>(testData);
+	auto sll = RangeToSinglyLinkedList(testData);
 
 	EXPECT_NE(sll.head, nullptr);
 	EXPECT_EQ(sll.head->next, nullptr);
@@ -26,7 +26,7 @@ TEST(RangeToSinglyLinkedListUnitTests, ShouldReturn_ListWithOneElement_When_Vect
 TEST(RangeToSinglyLinkedListUnitTests, ShouldReturn_ListWitTheSameElements_When_VectorHasMoreThanOneElement)
 {
 	const std::vector<int> testData{1, 2, 3, 4, 5, 6};
-	auto sll = RangeToSinglyLinkedList<int>(testData);
+	auto sll = RangeToSinglyLinkedList(testData);
 
 	auto currNode = sll.head;
 	size_t elementsInListCount = 0;
@@ -41,7 +41,7 @@ TEST(RangeToSinglyLinkedListUnitTests, ShouldReturn_ListWitTheSameElements_When_
 TEST(RangeToSinglyLinkedListUnitTests, ShouldAccommodate_InitializerLists)
 {
 	const std::initializer_list<int> testData{1, 2, 3};
-	auto sll = RangeToSinglyLinkedList<int>(testData);
+	auto sll = RangeToSinglyLinkedList(testData);
 
 	auto listHead = sll.head;
 	EXPECT_EQ(listHead->value, 1);
@@ -52,7 +52,7 @@ TEST(RangeToSinglyLinkedListUnitTests, ShouldAccommodate_InitializerLists)
 TEST(RangeToDoublyLinkedListUnitTests, ShouldReturn_EmptyList_When_VectorIsEmpty)
 {
 	const std::vector<float> testData{};
-	auto dll = RangeToDoublyLinkedList<float>(testData);
+	auto dll = RangeToDoublyLinkedList(testData);
 
 	EXPECT_EQ(dll.head, nullptr);
 }
@@ -60,7 +60,7 @@ TEST(RangeToDoublyLinkedListUnitTests, ShouldReturn_EmptyList_When_VectorIsEmpty
 TEST(RangeToDoublyLinkedListUnitTests, ShouldReturn_ListWithOneElement_When_VectorHasExactlyOneElement)
 {
 	const std::vector<double> testData{4.21};
-	auto dll = RangeToDoublyLinkedList<double>(testData);
+	auto dll = RangeToDoublyLinkedList(testData);
 
 	EXPECT_NE(dll.head, nullptr);
 	EXPECT_EQ(dll.head->next, nullptr);
@@ -70,7 +70,7 @@ TEST(RangeToDoublyLinkedListUnitTests, ShouldReturn_ListWithOneElement_When_Vect
 TEST(RangeToDoublyLinkedListUnitTests, ShouldReturn_ListWitTheSameElements_When_VectorHasMoreThanOneElement)
 {
 	const std::vector<int> testData{1, 2, 3, 4, 5, 6};
-	auto dll = RangeToDoublyLinkedList<int>(testData);
+	auto dll = RangeToDoublyLinkedList(testData);
 
 	auto currNode = dll.head;
 	for (auto it = testData.cbegin(); it != testData.cend(); it++)
@@ -84,7 +84,7 @@ TEST(RangeToDoublyLinkedListUnitTests,
 	ShouldReturn_ListWitTheSameElements_When_VectorHasMoreThanOneElement_Backwards)
 {
 	const std::vector<int> testData{1, 2, 3, 4, 5, 6};
-	auto dll = RangeToDoublyLinkedList<int>(testData);
+	auto dll = RangeToDoublyLinkedList(testData);
 
 	auto currNode = dll.head;
 	// Find the tail of list
@@ -103,7 +103,7 @@ TEST(RangeToDoublyLinkedListUnitTests,
 TEST(RangeToDoublyLinkedListUnitTests, ShouldAccommodate_InitializerLists)
 {
 	const std::initializer_list<int> testData{1, 2, 3};
-	auto dll = RangeToDoublyLinkedList<int>(testData);
+	auto dll = RangeToDoublyLinkedList(testData);
 
 	auto listHead = dll.head;
 	EXPECT_EQ(listHead->value, 1);
