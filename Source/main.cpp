@@ -14,6 +14,10 @@ int main()
 	std::cout << std::endl;
 	datastructures::RunDoublyLinkedListExample();
 	std::cout << std::endl;
+	datastructures::RunRangeToSinglyLinkedListExample();
+	std::cout << std::endl;
+	datastructures::RunRangeToDoublyLinkedListExample();
+	std::cout << std::endl;
 
 	datastructures::RunQueueExample();
 	std::cout << std::endl;

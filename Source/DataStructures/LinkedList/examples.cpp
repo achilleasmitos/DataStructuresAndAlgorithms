@@ -3,6 +3,7 @@
 
 #include "DoublyLinkedList.h"
 #include "SinglyLinkedList.h"
+#include "Utils/LinkedListUtils.h"
 
 namespace datastructures
 {
@@ -65,6 +66,50 @@ void RunDoublyLinkedListExample()
 	{
 		std::cout << curr->value << " ";
 		curr = curr->prev;
+	}
+	std::cout << "]" << std::endl;
+}
+
+void RunRangeToSinglyLinkedListExample()
+{
+	std::vector<int> inputVector{1, 2, 3, 4, 5};
+	auto sll = RangeToSinglyLinkedList<int>(inputVector);
+
+	auto currNode = sll.head;
+	std::cout << "The sllist produced from the vector is: [ ";
+	while (currNode != nullptr)
+	{
+		std::cout << currNode->value << " ";
+		currNode = currNode->next;
+	}
+	std::cout << "]" << std::endl;
+}
+
+void RunRangeToDoublyLinkedListExample()
+{
+	std::vector<int> inputVector{1, 2, 3, 4, 5};
+	auto dll = RangeToDoublyLinkedList<int>(inputVector);
+
+	auto currNode = dll.head;
+	std::cout << "The dllist produced from the vector is: [ ";
+	while (currNode != nullptr)
+	{
+		std::cout << currNode->value << " ";
+
+		if (currNode->next == nullptr)
+		{
+			break;
+		}
+		currNode = currNode->next;
+	}
+	std::cout << "]" << std::endl;
+
+	std::cout << "Also, read backwards the dllist is: [ ";
+	while (currNode != nullptr)
+	{
+		std::cout << currNode->value << " ";
+
+		currNode = currNode->prev;
 	}
 	std::cout << "]" << std::endl;
 }

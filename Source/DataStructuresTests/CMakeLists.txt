@@ -1,6 +1,7 @@
 set(
     source_list
 	Queue/QueueTests.cpp
+	Utils/LinkedListUtilsTests.cpp
 )
 
 add_executable(DataStructuresTests ${source_list})

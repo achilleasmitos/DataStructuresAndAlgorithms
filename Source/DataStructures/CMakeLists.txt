@@ -7,6 +7,7 @@ set(
 	Queue/examples.cpp
 	Queue/examples.h
 	Queue/Queue.h
+	Utils/LinkedListUtils.h
 )
 
 add_library(DataStructures ${source_list})
