@@ -65,16 +65,4 @@ target_include_directories(DataStructuresAndAlgorithms PUBLIC "${PROJECT_BINARY_
 # Needed for GTest
 enable_testing()
 
-# Old remnants from GoogleTest tests
-# add_executable(
-# MyGTest
-# MyGTest.cpp
-# )
-# target_link_libraries(
-# MyGTest
-# GTest::gtest_main
-# )
 include(GoogleTest)
-
-# TODO: setup GoogleTest properly for every project
-# gtest_discover_tests(MyGTest)
