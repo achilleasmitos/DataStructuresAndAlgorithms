@@ -14,7 +14,7 @@ concept RangeType = std::ranges::range<I>;
 
 static_assert(RangeType<std::vector<int>>);
 static_assert(RangeType<std::vector<std::string>>);
-static_assert(!RangeType<std::array<std::string, 4>>); // --> does not accept arrays, end() is not a sentinel
+static_assert(!RangeType<std::array<std::string, 4>>); // --> does not accept arrays, end() is not a sentinel in C++20
 static_assert(RangeType<std::initializer_list<int>>);
 static_assert(RangeType<std::initializer_list<std::string>>);
 #pragma endregion
